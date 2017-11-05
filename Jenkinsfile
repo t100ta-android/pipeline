@@ -2,6 +2,7 @@ pipeline {
   agent {
     node {
       label 'android-x86 && repo'
+      customWorkspace 'marshmallow-x86'
     }
     
   }
