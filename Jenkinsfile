@@ -33,6 +33,6 @@ make iso_img -j4'''
   environment {
     USE_CCACHE = '1'
     CCACHE_DIR = '.ccache'
-    PATH = '/usr/lib/jvm/java-7-openjdk-amd64/bin:$PATH'
+    PATH = "/usr/lib/jvm/java-7-openjdk-amd64/bin:$PATH"
   }
 }
