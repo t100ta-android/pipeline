@@ -19,9 +19,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '''. build/envsetup.sh
-lunch 8
-make iso_img -j4'''
+        sh 'bash -c ". build/envsetup.sh && lunch 8 && make iso_img -j4"'
       }
     }
     stage('Archive') {
