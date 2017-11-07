@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Init') {
       steps {
-        sh 'repo init -u https://gogs.thedrhax.pw/t100ta-android/manifest.git -b marshmallow-x86 --depth=1'
+        sh 'repo init -u https://gogs.thedrhax.pw/t100ta-android/manifest.git -b marshmallow-x86 --depth=10'
       }
     }
     stage('Sync') {
