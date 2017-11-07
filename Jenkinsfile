@@ -32,5 +32,6 @@ pipeline {
     USE_CCACHE = '1'
     CCACHE_DIR = '.ccache'
     PATH = "/usr/lib/jvm/java-7-openjdk-amd64/bin:$PATH"
+    TARGET_KERNEL_CONFIG = 't100ta-x86_64_defconfig'
   }
 }
