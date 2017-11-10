@@ -15,6 +15,7 @@ pipeline {
     stage('Sync') {
       steps {
         sh 'repo sync --no-tags --no-clone-bundle --force-sync -j4'
+        sh 'repo manifest -r -o static-manifest.xml'
       }
     }
     stage('Build') {
@@ -25,6 +26,7 @@ pipeline {
     stage('Archive') {
       steps {
         archiveArtifacts 'out/target/product/x86_64/android_x86_64.iso'
+        archiveArtifacts 'static-manifest.xml'
       }
     }
   }
